@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navBar {
+    background-color: darkcyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    /* z-index: 999; */
+}
+.navBar h1 {
+    font-size: 35px;
+}
+.navBar .subMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 30px;
+    font-size: 25px;
+    transition: all 0.5s ;
+}
+.navBar .subMenu  a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.navBar .subMenu  a:hover {
+    background-color: crimson;
+}
+.navBar  i{
+    display: none;
+    /* display: none!important; */
+    font-size: 20px;
+}
+input{
+    display: none;
+}
+    input:checked ~ .subMenu {
+    background-color: darkred;
+    left: 0;
+}
+.home{
+    background-color: crimson;
+    color: white;
+    /* min-height: 91vh; */
+    height: 100vh;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    background-color: rgb(20, 220, 90);
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.service{
+    background-color: rgb(20, 173, 220);
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact{
+    background-color: rgb(220, 20, 50);
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:800px) {
+    .navBar .subMenu{
+        position: fixed;
+        background-color: rgb(21, 20, 20);
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 50px;
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: 93vh;
+    }
+    .navBar .subMenu  a{
+        width: 100%;
+        text-align: center;
+        border-radius: 0px;
+    }
+    .navBar  i{
+    display:block
+    
+        }
+        
+}
